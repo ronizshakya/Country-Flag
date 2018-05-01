@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Flags</title>
+    
+        <!-- favicon -->
+        <link rel="icon" type="icon/png" href="assets/images/favicon.png">
+    
+        <!-- Bootstrap -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- Responsive menu -->
+        <link rel="stylesheet" href="assets/css/meanmenu.css" media="all" />
+    
+        <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    	
+        
+        <!--font-->        
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700italic,400italic,700' rel='stylesheet' type='text/css'>
+        
+</script>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+
+        <!-- Responsive menu js -->
+        <script src="assets/js/jquery.meanmenu.js"></script>
+        <script type="text/javascript">
+          jQuery(document).ready(function(){
+            jQuery('.main-navigation').meanmenu();
+          });
+</script>
+<style type="text/css">
+	body {padding:50px;}
+
+#target {
+  height:160px;
+  padding:5px;
+}
+#target1 {
+  display:none;
+  height:160px;
+  padding:5px;
+}
+#target2 {
+  display:none;
+  height:160px;
+  padding:5px;
+}
+#target3 {
+  display:none;
+  height:160px;
+  padding:5px;
+}
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 160px;
+    height: 150px;
+}
+</style>
+</head>
+<body>
+		<div class="row">
+			<div class="col-md-4 ">
+				<button class="nep"><a href="">NEPAL</a></button>
+				<button class="ban"><a href="">BANGLADESH</a></button>
+				<button class="sri"><a href="">BHUTAN</a></button>
+				<button class="mal"><a href="">MALDIVES</a></button>
+			</div>
+			<div class="col-md-6" style="text-align: center; margin: 0 auto;" >
+				<div class="flag_img" id="target" ><img src="/C:/xampp/htdocs/jstests/countryflag/nep.png" ></div>
+				<div class="flag_img" id="target1" ><img src="/C:/xampp/htdocs/jstests/countryflag/bang.png"></div>
+				<div class="flag_img" id="target2" ><img src="/C:/xampp/htdocs/jstests/countryflag/bhu.png"></div>
+				<div class="flag_img" id="target3" ><img src="/C:/xampp/htdocs/jstests/countryflag/mal.png"></div>
+			</div>
+		</div>
+
+</body>
+		<script type="text/javascript">
+			jQuery(document).ready(function($){
+				$('.nep').click(function(e) {
+					$('.flag_img').hide();  //.hide the default flag after click
+					$('#target').show(1000);
+					e.preventDefault();
+				});
+				$('.ban').click(function(e) {
+					$('.flag_img').hide();
+					$('#target1').show(1000); //.show to show the image of the country
+					e.preventDefault();
+				});
+				$('.sri').click(function(e) {
+					$('.flag_img').hide();
+					$('#target2').show(1000);
+					e.preventDefault();
+				});
+				$('.mal').click(function(e) {
+					$('.flag_img').hide();
+					$('#target3').show(1000);
+					e.preventDefault();
+				});
+			});
+		</script>
+</html>
